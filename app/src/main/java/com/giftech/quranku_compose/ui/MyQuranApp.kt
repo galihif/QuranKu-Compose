@@ -9,7 +9,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.giftech.quranku_compose.ui.navigation.Screen
 import com.giftech.quranku_compose.ui.screen.home.HomeScreen
-import com.giftech.quranku_compose.ui.screen.search.SearchScreen
 import com.giftech.quranku_compose.ui.screen.surah.SurahScreen
 import com.giftech.quranku_compose.ui.screen.welcome.WelcomeScreen
 
@@ -37,9 +36,6 @@ fun MyQuranApp() {
                 },
                 onLastReadClick = {
                     navController.navigate(Screen.Surah.createRoute(it))
-                },
-                onSearchClick = {
-                    navController.navigate(Screen.Search.route)
                 }
             )
         }
@@ -50,16 +46,6 @@ fun MyQuranApp() {
             val nomorSurah = it.arguments?.getInt("nomorSurah") ?: 1
             SurahScreen(
                 nomorSurah = nomorSurah,
-                onBack = {
-                    navController.popBackStack()
-                }
-            )
-        }
-        composable(Screen.Search.route){
-            SearchScreen(
-                onSurahClicked = {
-                    navController.navigate(Screen.Surah.createRoute(it))
-                },
                 onBack = {
                     navController.popBackStack()
                 }

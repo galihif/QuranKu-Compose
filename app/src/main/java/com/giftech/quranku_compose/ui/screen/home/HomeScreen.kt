@@ -34,7 +34,6 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     onSurahClick: (Int) -> Unit = {},
     onLastReadClick: (Int) -> Unit = {},
-    onSearchClick: () -> Unit = {},
 ) {
     val listSurah = remember {
         viewModel.listSurah
@@ -65,7 +64,6 @@ fun HomeScreen(
                             onLastReadClick = {
                                 onLastReadClick(lastRead.value.nomorSurah)
                             },
-                            onSearchClick = onSearchClick
                         )
                     }
                 }
@@ -80,7 +78,6 @@ fun HomeContent(
     lastRead: LastRead,
     onSurahClicked: (Int) -> Unit,
     onLastReadClick: () -> Unit,
-    onSearchClick: () -> Unit,
 ) {
     LazyColumn(
         Modifier

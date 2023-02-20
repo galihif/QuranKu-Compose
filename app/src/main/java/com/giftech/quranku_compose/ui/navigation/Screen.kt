@@ -7,5 +7,4 @@ sealed class Screen(val route: String) {
     object Surah : Screen("surah/{nomorSurah}") {
         fun createRoute(nomorSurah: Int) = "surah/$nomorSurah"
     }
-    object Search : Screen("search")
 }
