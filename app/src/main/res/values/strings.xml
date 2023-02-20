@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">QuranKu-Compose</string>
+    <string name="title">My Quran</string>
+    <string name="desc">Learn Quran and\n Recite once everyday</string>
+    <string name="get_started">Get Started</string>
+    <string name="salam">Assalamualaikum</string>
+    <string name="surah">Surah</string>
+    <string name="search_surah">Search Surah</string>
 </resources>
